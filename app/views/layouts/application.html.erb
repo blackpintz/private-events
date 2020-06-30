@@ -10,6 +10,29 @@
   </head>
 
   <body>
+    <div class="ui inverted segment">
+    <div class="ui inverted secondary menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+      <div class="right menu">
+        <div class="item">
+          <div class="ui primary button">Sign Up</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui container">
+    <%flash.each do |name, msg|%>
+      <%= msg%>
+    <% end %>
     <%= yield %>
+  </div>
   </body>
 </html>

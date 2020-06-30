@@ -1,1 +1,17 @@
-<h1>Sign up form will go here!</h1>
+<div class="ui four column centered grid">
+    <div id="login" class="column">
+        <h1>Sign up</h1> 
+        <%= form_with scope: :user, url: users_path, local: true do |f| %>
+        <div class="ui form">
+          <div class="field">
+            <%= f.label :user_name %>
+            <div class="ui left icon input">
+              <%= f.text_field :name, autofocus: true, placeholder: "user name" %>
+              <i class="user icon"></i>
+            </div>
+          </div>
+           <%= f.submit "Sign up", class: "ui brown fluid button" %>
+        </div>
+        <% end %>
+    </div>
+</div>
