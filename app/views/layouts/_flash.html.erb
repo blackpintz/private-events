@@ -1,0 +1,14 @@
+<%flash.each do |name, msg|%>
+    <% if name == "alert"%>
+    <div class="ui negative message">
+      <i class="close icon"></i>
+      <p><%= msg%></p>
+    </div>
+    <% else %>
+    <div class="ui success message">
+      <i class="close icon"></i>
+      <p><%= msg%></p>
+    </div>
+    <% end %>
+      
+<% end %>

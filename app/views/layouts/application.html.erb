@@ -21,17 +21,17 @@
       <a class="item">
         Friends
       </a>
+      <% if logged_in? %>
       <div class="right menu">
         <div class="item">
            <%= link_to 'Log out', logout_path, method: :delete, class: 'ui red button' %>
         </div>
       </div>
+      <% end %>
     </div>
   </div>
   <div class="ui container">
-    <%flash.each do |name, msg|%>
-      <%= msg%>
-    <% end %>
+    <%= render 'layouts/flash' %>
     <%= yield %>
   </div>
   </body>
