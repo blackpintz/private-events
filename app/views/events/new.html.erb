@@ -1,0 +1,16 @@
+<div class="ui four column centered grid">
+    <div id="login" class="column">
+        <h2>Create an Event!</h2>
+        <%= form_with scope: :event, url: events_path, local: true do |f| %>
+        <div class="ui form">
+          <div class="field">
+            <%= f.label :description %>
+            <div class="ui left icon input">
+              <%= f.text_area :description, autofocus: true, placeholder: "Describe the event" %>
+            </div>
+          </div>
+           <%= f.submit "Create Event", class: "ui brown fluid button" %>
+        </div>
+        <% end %>
+    </div>
+</div>

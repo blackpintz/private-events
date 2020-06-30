@@ -1,7 +1,7 @@
 <% if @events.empty? %>
 <h2>You have not created any events.</h2>
 <% else %>
-<%= @events.each do |event| %>
+<% @events.each do |event| %>
 <div class="ui card">
   <!--<div class="image">-->
   <!--  <img src="/images/avatar2/large/kristy.png">-->
@@ -25,3 +25,4 @@
 </div>
 <% end %>
 <% end %>
+
