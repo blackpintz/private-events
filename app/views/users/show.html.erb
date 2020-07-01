@@ -1,27 +1,30 @@
 <% if @events.empty? %>
 <h2>You have not created any events.</h2>
 <% else %>
+<div class="ui three stackable cards">
 <% @events.each do |event| %>
-<div class="ui card">
-  <!--<div class="image">-->
-  <!--  <img src="/images/avatar2/large/kristy.png">-->
-  <!--</div>-->
+  <div class="ui link card">
+    <div class="image">
+      <img src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+    </div>
   <div class="content">
-    <a class="header">Kristy</a>
+    <div class="header"><%= event.description %></div>
     <div class="meta">
-      <span class="date">Joined in 2013</span>
+      <span class="category">Events</span>
+      <span><%= event.created_at%></span>
     </div>
     <div class="description">
-      <%= event.description %>
+      <p></p>
     </div>
   </div>
   <div class="extra content">
-    <a>
-      <i class="user icon"></i>
-      22 Friends
-    </a>
+    <div class="right floated author">
+      <img class="ui avatar image" src="https://images.unsplash.com/photo-1530700724215-a100745eb7e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"> Matt
+    </div>
   </div>
 </div>
 <% end %>
+</div>
 <% end %>
+
 
