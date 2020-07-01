@@ -15,6 +15,7 @@
       <%= link_to "Home", root_path, class: 'active item' %>
       <% if logged_in? %>
       <%= link_to "Add event", new_event_path, class: 'item'%>
+      <%= link_to "View my events", user_path(current_user), class: 'item'%>
       <% end %>
       <div class="right menu">
         <% if logged_in? %>

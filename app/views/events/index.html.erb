@@ -1,5 +1,6 @@
+<h2 class='ui header'>Upcoming Events</h2>
 <div class="ui cards">
-    <% @events.each do |event| %>
+    <% @future_events.each do |event| %>
   <div class="card">
     <div class="content">
       <img class="right floated mini ui image" src="https://images.pexels.com/photos/2011414/pexels-photo-2011414.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
@@ -7,7 +8,34 @@
        <%= event.creator.name %>
       </div>
       <div class="meta">
-        Friends of Veronika
+        <%= event.date %>
+      </div>
+      <div class="description">
+        <%= event.description %>
+      </div>
+    </div>
+    <div class="extra content">
+      <div class="ui two buttons">
+        <div class="ui basic green button">Approve</div>
+        <div class="ui basic red button">Decline</div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+<div class="ui section divider"></div>
+
+<h2 class='ui header'>Previous Events</h2>
+<div class="ui cards">
+    <% @past_events.each do |event| %>
+  <div class="card">
+    <div class="content">
+      <img class="right floated mini ui image" src="https://images.pexels.com/photos/2011414/pexels-photo-2011414.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+      <div class="header">
+       <%= event.creator.name %>
+      </div>
+      <div class="meta">
+        <%= event.date %>
       </div>
       <div class="description">
         <%= event.description %>
