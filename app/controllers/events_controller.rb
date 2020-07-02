@@ -11,12 +11,10 @@ class EventsController < ApplicationController
     def create
         @event = current_user.events.build(event_params)
         @event[:date] = Date.today
-        if @event.save
-            flash[:notice] = "Event created."
-            redirect_to root_path
-        else
-            render 'new'
-        end
+        @event.save
+        flash[:notice] = "Event created."
+        redirect_to root_path
+
     end
     
     def index

@@ -50,6 +50,7 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'shoulda-matchers', '~>3.1'
   gem 'launchy'
+  gem 'rails-controller-testing'
   # Adds support for Capybara system testing and selenium driver
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
