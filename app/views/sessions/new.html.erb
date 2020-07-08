@@ -1,0 +1,27 @@
+<h2>Log in</h2>
+
+<div class="ui placeholder segment">
+  <div class="ui two column very relaxed stackable grid">
+    <div class="column">
+      <%= form_with scope: :session, url: login_path, local: true do |f|%>
+      <div class="field bottom-space">
+        <%= f.label :user_name%>
+        <div class="ui left icon input">
+          <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+          <i class="user icon"></i>
+        </div>
+      </div>
+          <%= f.submit "Log in", class:"ui brown fluid button" %>
+      <% end %>
+    </div>
+    <div class="middle aligned column">
+      <div class="ui big brown button">
+        <i class="signup icon"></i>
+        <%= link_to "Sign up", signup_path %><br />
+      </div>
+    </div>
+  </div>
+  <div class="ui vertical divider">
+    Or
+  </div>
+</div>

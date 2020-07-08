@@ -10,6 +10,29 @@
   </head>
 
   <body>
+    <div class="ui inverted segment">
+    <div class="ui inverted secondary menu">
+      <%= link_to "Home", root_path, class: 'active item' %>
+      <% if logged_in? %>
+      <%= link_to "Add event", new_event_path, class: 'item'%>
+      <%= link_to "View my events", user_path(current_user), class: 'item'%>
+      <% end %>
+      <div class="right menu">
+        <% if logged_in? %>
+          <div class="item">
+             <%= link_to 'Log out', logout_path, method: :delete, class: 'ui red button' %>
+          </div>
+        <% else %>
+        <div class="item">
+           <%= link_to 'Sign in', login_path, class: 'ui green button' %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="ui container">
+    <%= render 'layouts/flash' %>
     <%= yield %>
+  </div>
   </body>
 </html>

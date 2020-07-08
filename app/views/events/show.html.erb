@@ -1,0 +1,29 @@
+<div class="ui four stackable cards">
+<% @attendees.each  do |attendee| %>
+  <div class="card">
+    <div class="image">
+      <img src="https://images.unsplash.com/photo-1546070449-2d6b82ebe10a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+    </div>
+    <div class="content">
+      <div class="header"><%= attendee.name %></div>
+      <div class="meta">
+        <a>Friends</a>
+      </div>
+      <div class="description">
+        Matthew is an interior designer living in New York.
+      </div>
+    </div>
+    <div class="extra content">
+      <span class="right floated">
+        Joined in 2013
+      </span>
+      <span>
+        <i class="user icon"></i>
+        75 Friends
+      </span>
+    </div>
+  </div>
+<% end %>
+</div>
+  
+
